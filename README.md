@@ -20,8 +20,11 @@ Work for MFA D+T's Algorithmic Animation class, Fall 2013, taught by @cwhitney.
 
 **Week 5**
 - Snake - Processing version of the creature assignment from last week. Atan2 doesn't work yet, not sure why.
+- Fireworks - Still in progress.
 
-**Week 6**h
+**Week 6**
 - Particle Sin Cos - a particle system using sine and cosine and three adjustable parameters with ofxUI. Making trails with the particles messes up the ofxUI box, fixed with ofRect, not a very elegant solution. 
 - Particle Sin Cos with FBO - trying to fix the trails issue when using ofxUI with FBOs, still having big memory issues with this one.
 - Understanding FBOs - excercise in understanding FBOs, using code from the openFrameworks fboTrailsExample.
+
+**Week 7**

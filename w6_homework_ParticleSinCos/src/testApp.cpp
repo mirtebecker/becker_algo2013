@@ -2,6 +2,7 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+    
     ofSetVerticalSync(true);
     ofSetBackgroundAuto(false);
     ofBackground(0);

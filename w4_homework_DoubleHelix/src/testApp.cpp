@@ -5,7 +5,8 @@ void testApp::setup(){
     ofSetVerticalSync(true);
     ofBackground(0);
     
-    cam.setAutoDistance(true);
+    cam.setPosition(ofPoint(ofGetWidth()/2, ofGetHeight()/2, 700));
+    
     
     radius = 50;
     
@@ -54,7 +55,6 @@ void testApp::draw(){
     ofSetColor(255);
     ofDrawBitmapString(camPosStr, 20, 65);
     
-    
     cam.begin();
     
     ofPushMatrix();{
@@ -84,11 +84,12 @@ void testApp::draw(){
             
         }ofEndShape();
         
-//        ofSetLineWidth(5);
-//        for(int i = 0; i < Helix1.size(); i++){
-//            ofSetColor(255);
-//            ofLine(Helix1[i].x, Helix1[i].y, Helix1[i].z, Helix2[i].x, Helix2[i].y, Helix2[i].z);
-//        }
+        ofSetLineWidth(5);
+        for(int i = 0; i < Helix1.size(); i++){
+            ofSetColor(255);
+            ofSetLineWidth(1);
+            ofLine(Helix1[i].x, Helix1[i].y, Helix1[i].z, Helix2[i].x, Helix2[i].y, Helix2[i].z);
+        }
     
     }ofPopMatrix();
     

@@ -19,13 +19,10 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    ofEasyCam cam; // add mouse controls for camera movement
+    ofEasyCam cam;
 
     vector<ofVec3f> Helix1;
     vector<ofVec3f> Helix2;
     
     float radius;
-		
-    ofNode lookat;
-    
 };

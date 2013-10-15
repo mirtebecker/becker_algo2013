@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "w6_homework_ParticleSinCos_withFBO.app"
+               BuildableName = "w6_homework_Particle_withFBO.app"
                BlueprintName = "w6_homework_ParticleSinCos_withFBO"
                ReferencedContainer = "container:w6_homework_ParticleSinCos_withFBO.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w6_homework_ParticleSinCos_withFBO.app"
+            BuildableName = "w6_homework_Particle_withFBO.app"
             BlueprintName = "w6_homework_ParticleSinCos_withFBO"
             ReferencedContainer = "container:w6_homework_ParticleSinCos_withFBO.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w6_homework_ParticleSinCos_withFBO.app"
+            BuildableName = "w6_homework_Particle_withFBO.app"
             BlueprintName = "w6_homework_ParticleSinCos_withFBO"
             ReferencedContainer = "container:w6_homework_ParticleSinCos_withFBO.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w6_homework_ParticleSinCos_withFBO.app"
+            BuildableName = "w6_homework_Particle_withFBO.app"
             BlueprintName = "w6_homework_ParticleSinCos_withFBO"
             ReferencedContainer = "container:w6_homework_ParticleSinCos_withFBO.xcodeproj">
          </BuildableReference>
