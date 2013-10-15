@@ -5,31 +5,35 @@ void testApp::setup(){
     ofSetVerticalSync(true);
     ofBackground(0);
     
-    cam.setPosition(ofPoint(ofGetWidth()/2, ofGetHeight()/2, 700));
-    
+    cam.setPosition(-80, -55, -20);
+    cam.setTarget( ofVec3f(0, 0, 0) );
+    cam.setDistance(10);
     
     radius = 50;
     
-    for(int i = 0; i < 25; i++){
-        float angle = i;
-        float Helix1x = radius * sin(angle);
-        float Helix1y = radius * cos(angle);
+    for(int i = 0; i < 180; i++){
         
-        ofPoint Helix1tmp;
-        Helix1tmp.x = Helix1x;
-        Helix1tmp.y = Helix1y;
-        Helix1tmp.z += i*10;
-        Helix1.push_back(Helix1tmp);
+            float angle = i;
         
-        float angle2 = i+180;
-        float Helix2x = radius * sin(angle2);
-        float Helix2y = radius * cos(angle2);
-        
-        ofPoint Helix2tmp;
-        Helix2tmp.x = Helix2x;
-        Helix2tmp.y = Helix2y;
-        Helix2tmp.z += i*10;
-        Helix2.push_back(Helix2tmp);
+            float Helix1x = radius * sin(angle);
+            float Helix1y = radius * cos(angle);
+            
+            ofPoint Helix1tmp;
+            Helix1tmp.x = Helix1x;
+            Helix1tmp.y = Helix1y;
+            //Helix1tmp.z += i*20;
+            Helix1.push_back(Helix1tmp);
+            
+            float angle2 = i+180;
+            float Helix2x = radius * sin(angle2);
+            float Helix2y = radius * cos(angle2);
+            
+            ofPoint Helix2tmp;
+            Helix2tmp.x = Helix2x;
+            Helix2tmp.y = Helix2y;
+            //Helix2tmp.z += i*20;
+            Helix2.push_back(Helix2tmp);
+            
     }
 }
 
@@ -84,12 +88,12 @@ void testApp::draw(){
             
         }ofEndShape();
         
-        ofSetLineWidth(5);
-        for(int i = 0; i < Helix1.size(); i++){
-            ofSetColor(255);
-            ofSetLineWidth(1);
-            ofLine(Helix1[i].x, Helix1[i].y, Helix1[i].z, Helix2[i].x, Helix2[i].y, Helix2[i].z);
-        }
+//        ofSetLineWidth(5);
+//        for(int i = 0; i < Helix1.size(); i++){
+//            ofSetColor(255);
+//            ofSetLineWidth(1);
+//            ofLine(Helix1[i].x, Helix1[i].y, Helix1[i].z, Helix2[i].x, Helix2[i].y, Helix2[i].z);
+//        }
     
     }ofPopMatrix();
     

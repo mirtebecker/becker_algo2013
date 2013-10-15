@@ -17,7 +17,7 @@ public:
     void update();
     void draw();
     
-    void setParams(float px, float py, float vx, float vy, ofColor color);
+    void setParams(float px, float py, float vx, float vy);
     void addForce(ofVec2f force);
     void addDampingForce();
     void resetForces();
@@ -30,8 +30,4 @@ public:
     float now;
     float target;
     float alpha;
-    
-    ofColor c;
-    bool up;
-
 };

@@ -27,5 +27,4 @@ class testApp : public ofBaseApp{
     
     float target;
     ofVec2f pos;
-    ofColor c;
 };

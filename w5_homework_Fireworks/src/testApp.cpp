@@ -49,7 +49,6 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::explode(){
-    c = ofColor::fromHsb(ofRandom(0, 255), 255, 255);
     
     cout << particleList.size() << endl;
     
@@ -58,7 +57,7 @@ void testApp::explode(){
         float vx = cos(circVal) * ofRandom(0, 4);
         float vy = sin(circVal) * ofRandom(0, 4);
         
-        particleList[i].setParams(pos.x, pos.y, vx, vy, c);
+        particleList[i].setParams(pos.x, pos.y, vx, vy);
     }
 }
 
@@ -66,7 +65,7 @@ void testApp::explode(){
 void testApp::draw(){
     ofBackgroundGradient(ofColor(0, 50), ofColor(0, 50), OF_GRADIENT_CIRCULAR);
     
-    ofSetColor(c);
+    ofSetColor(240, 20, 90);
     ofCircle(pos, 1);
     
     for(int i = 0; i < particleList.size(); i++){

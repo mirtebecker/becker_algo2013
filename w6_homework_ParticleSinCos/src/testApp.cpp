@@ -5,13 +5,13 @@ void testApp::setup(){
     
     ofSetVerticalSync(true);
     ofSetBackgroundAuto(false);
-    ofBackground(0);
+    ofBackground(122, 0, 38);
     ofEnableAlphaBlending();
     
     // Particles
     steps = 3;
     strength = 1;
-    size = 300;
+    size = 250;
     
     now = ofGetElapsedTimeMillis();
     target = ofGetElapsedTimeMillis() + ofRandom(1000, 2000);
@@ -70,7 +70,8 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-    ofBackgroundGradient(ofColor(0, 1), ofColor(0, 1), OF_GRADIENT_CIRCULAR);
+
+    ofBackgroundGradient(ofColor(122, 0, 38, 1), ofColor(122, 0, 38, 1), OF_GRADIENT_CIRCULAR);
     
     ofSetColor(0);
     ofFill();

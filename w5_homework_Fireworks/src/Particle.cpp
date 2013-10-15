@@ -13,7 +13,7 @@ Particle::Particle(){
     damping.set(0.01, 0.01);
 }
 
-void Particle::setParams(float px, float py, float vx, float vy, ofColor color){
+void Particle::setParams(float px, float py, float vx, float vy){
     pos.set(px, py);
     vel.set(vx, vy);
     
@@ -38,25 +38,12 @@ void Particle::addDampingForce(){
 void Particle::update(){
     vel += frc;
     pos += vel;
-    
-    if(alpha > 254){
-        up = false;
-    }
-    if(alpha < 1){
-        up = true;
-    }
-    
-    if(up){
-        alpha++;
-    }else {
-        alpha--;
-    }
 }
 
 void Particle::draw(){
     ofEnableBlendMode(OF_BLENDMODE_ADD);
     
-    ofSetColor(color);
+    ofSetColor(240, 20, 90);
     ofCircle(pos, 2);
     
     ofColor(255, alpha);
