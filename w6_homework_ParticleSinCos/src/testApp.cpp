@@ -85,7 +85,7 @@ void testApp::draw(){
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
     if(key == 'c'){
-        ofClear(0);
+        ofClear(122, 0, 38);
     }
 }
 

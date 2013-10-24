@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CE2CDE8A-E641-41ED-9CC5-E90831FCC4F3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>w8_homework_VectorField</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F91DB847-B41C-425C-BD70-BB3AB59C159B</key>
+		<string>https://github.com/mirtebecker/becker_algo2013.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>w8_homework_VectorField/w8_homework_VectorField.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F91DB847-B41C-425C-BD70-BB3AB59C159B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mirtebecker/becker_algo2013.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F91DB847-B41C-425C-BD70-BB3AB59C159B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F91DB847-B41C-425C-BD70-BB3AB59C159B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>becker_algo2013</string>
+		</dict>
+	</array>
+</dict>
+</plist>

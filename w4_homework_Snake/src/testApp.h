@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "Snake.h"
+#include "Part.h"
 
 class testApp : public ofBaseApp{
 
@@ -20,5 +20,8 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    Snake mySnake;
+    vector<Part> partList;
+    float size;
+    float catchUpSpeed;
+    
 };

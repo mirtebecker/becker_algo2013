@@ -30,4 +30,10 @@ public:
     float now;
     float target;
     float alpha;
+    
+    float rotate;
+    int rotateNum;
+    
+    int fill, shape, color, size1, size2;
+    ofColor c1, c2, c3, c4;
 };

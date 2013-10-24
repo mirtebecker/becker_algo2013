@@ -2,12 +2,14 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+    ofBackground(188, 188, 188);
     ofSetVerticalSync(true);
-    ofBackground(0);
-    //ofSetBackgroundAuto(false);
+    ofSetBackgroundAuto(false);
     
     pos = ofVec2f(ofRandom(200, 800), ofGetWindowHeight());
     target = ofRandom(50, ofGetWindowHeight()/2);
+    
+    explode = false;
     
     for(int i =0; i < 100; i++){
         addParticle();
@@ -28,7 +30,7 @@ void testApp::update(){
     
     for(int i = 0; i < particleList.size(); i++){
         particleList[i].resetForces();
-        particleList[i].addForce(ofVec2f(0, 0.1));
+        particleList[i].addForce(ofVec2f(0, 0.01));
         particleList[i].addDampingForce();
         particleList[i].update();
     }
@@ -40,36 +42,35 @@ void testApp::update(){
     }
     
     if(pos.y < target){
-        explode();
-
+        
+        for(int i = 0; i < particleList.size(); i++){
+            float circVal = ofRandom(TWO_PI);
+            float vx = cos(circVal) * ofRandom(0, 4);
+            float vy = sin(circVal) * ofRandom(0, 4);
+            
+            particleList[i].setParams(pos.x, pos.y, vx, vy);
+        }
+        
+        explode = true;
+        cout << explode << endl;
+        
         pos = ofVec2f(ofRandom(200, 800), ofGetWindowHeight());
         target = ofRandom(20, ofGetWindowHeight()/2);
     }
 }
 
 //--------------------------------------------------------------
-void testApp::explode(){
-    
-    cout << particleList.size() << endl;
-    
-    for(int i = 0; i < particleList.size(); i++){
-        float circVal = ofRandom(TWO_PI);
-        float vx = cos(circVal) * ofRandom(0, 4);
-        float vy = sin(circVal) * ofRandom(0, 4);
-        
-        particleList[i].setParams(pos.x, pos.y, vx, vy);
-    }
-}
-
-//--------------------------------------------------------------
 void testApp::draw(){
-    ofBackgroundGradient(ofColor(0, 50), ofColor(0, 50), OF_GRADIENT_CIRCULAR);
+    ofBackgroundGradient(ofColor(188, 188, 188, 150), ofColor(188, 188, 188, 150), OF_GRADIENT_CIRCULAR);
     
-    ofSetColor(240, 20, 90);
-    ofCircle(pos, 1);
+    ofSetColor(245, 50, 125);
+    ofFill();
+    ofCircle(pos, 3);
     
-    for(int i = 0; i < particleList.size(); i++){
-        particleList[i].draw();
+    if(explode == true){
+        for(int i = 0; i < particleList.size(); i++){
+            particleList[i].draw();
+        }
     }
 }
 

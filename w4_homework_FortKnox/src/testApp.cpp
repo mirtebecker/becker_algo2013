@@ -7,7 +7,7 @@ void testApp::setup(){
     ofSetVerticalSync(true);
     ofEnableAlphaBlending();
     ofSetBackgroundAuto(false);
-    
+        
     radius = 150;
     points = 8;
     degrees = 0;
@@ -41,7 +41,7 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-
+    
     for(int i = 0; i < points; i++){
         pos[i].x += fftSmoothed[1]*i;
         pos[i].y += fftSmoothed[1]*i;

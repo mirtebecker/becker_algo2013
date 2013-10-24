@@ -20,10 +20,10 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    void explode();
-    void addParticle();
-    
     vector<Particle> particleList;
+
+    void addParticle();
+    bool explode;
     
     float target;
     ofVec2f pos;

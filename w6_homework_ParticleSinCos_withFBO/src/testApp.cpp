@@ -43,7 +43,7 @@ void testApp::setup(){
     
     fboUI->begin();{
         ofFill();
-        ofSetColor(255, 100);
+        ofSetColor(0, 100);
         ofRect(0, 0, 210, 210);
         
         gui->setColorBack(ofColor(255, 100));
@@ -108,14 +108,24 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
     // drawing fbo's
+    ofSetColor(255); // this fixes the glitch, thanks @bschorr
     fboUI->draw(0, 0);
     fbo->draw(0, 0);
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-    if(key == 'h'){
+    if(key == 'u'){
         gui->toggleVisible();
+    }
+    if(key == 'r'){
+        fbo->begin();{
+            ofClear(255, 0, 255, 0);
+        }fbo->end();
+        
+        steps = 3;
+        strength = 1;
+        size = 300;
     }
 }
 

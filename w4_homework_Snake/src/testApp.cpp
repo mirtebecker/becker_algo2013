@@ -4,28 +4,42 @@
 void testApp::setup(){
     ofSetVerticalSync(true);
     ofBackground(0);
+    
+    size = 5;
+    
+    for(int i = 0; i < 5; i++){
+        Part p;
+        partList.push_back(p);
+    }
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-    ofPoint mousePos( mouseX, mouseY );
-    mySnake.mousePos = mousePos;
+
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-    mySnake.draw();
+    for(int i = 0; i < partList.size(); i++){
+        ofVec2f targetPos;
+        
+        if(i == 0){
+            targetPos.x = mouseX;
+            targetPos.y = mouseY;
+            catchUpSpeed = 0.03;
+        }else{
+            targetPos.x = partList[i-1].pos.x+size;
+            targetPos.y = partList[i-1].pos.y+size;
+            catchUpSpeed = 0.03;
+        }
+        
+        partList[i].draw(targetPos, size, i, catchUpSpeed);
+    }
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-    if(key == OF_KEY_UP){
-        mySnake.parts++;
-    }
-    
-    if(key == OF_KEY_DOWN){
-        mySnake.parts--;
-    }
+
 }
 
 //--------------------------------------------------------------
