@@ -23,4 +23,8 @@ class testApp : public ofBaseApp{
     
     VectorField myVF;    
     vector<Particle> particleList;
+    
+    
+    ofImage img;
+    
 };

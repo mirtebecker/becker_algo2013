@@ -5,6 +5,8 @@ void testApp::setup(){
     ofBackground(255);
     ofSetVerticalSync(true);
     
+    img.loadImage("Seetal.jpg");
+    
     myVF.setup(ofGetWindowWidth(), ofGetWindowHeight(), 20);
         
     for(int i = 0; i < 100; i++){
