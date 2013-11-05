@@ -6,10 +6,14 @@ void testApp::setup(){
     ofSetFrameRate(60);
     ofBackground(0);
     
-    mSender.setup("localhost", 7000);
+    mSender.setup("192.168.1.117", 7000);
     mReceiver.setup(8000);
     
+    score = 0;
+    
     goalLocal.set( ofGetWindowSize() / 2.0 );
+    
+    mouseLocal.set(ofGetWindowSize()/2);
     
 }
 
@@ -20,6 +24,10 @@ void testApp::update(){
     if (goalLocal.distance(mouseLocal) < 20){
         goalLocal.set(ofRandom(ofGetWindowWidth()),ofRandom(ofGetWindowHeight()));
         score++;
+        
+        ofxOscMessage m;
+        m.setAddress("/score");
+        mSender.sendMessage(m);
     }
     
     cout << score << endl;
@@ -29,6 +37,9 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::checkOsc(){
     while(mReceiver.hasWaitingMessages()){
+        
+        cout << "message received" << endl;
+        
         ofxOscMessage m;
         mReceiver.getNextMessage(&m);
         
@@ -41,11 +52,18 @@ void testApp::checkOsc(){
             mouseLocal.set(xPos, yPos);
             
         }
+        
+        if(addr == "/score"){
+            score++;
+        }
     }
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
+    ofSetColor(255, 0, 255);
+    ofDrawBitmapStringHighlight(ofToString(score), 5, 10);
+    
     ofSetColor( 255 );
     ofCircle(mouseLocal, 20);
     
