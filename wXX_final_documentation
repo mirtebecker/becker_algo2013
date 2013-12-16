@@ -1,0 +1,22 @@
+Algorithmic Animation 2013, final documentation
+--------
+
+This project explores the effects of combining 'analog' (a mirror image) with digital image. A reflection of yourself can be such a powerful image,
+something that is not completely achievable with camera vision. Digital imagry on the other hand can turn something simple (like a box) into
+a completely new and magical than would not be possible in the real world (like project 'Box', on vimeo: http://vimeo.com/76068663). The project was
+specifically inspired by mirros in fairy tales and horror movies, I tried to achieve an effect of a 'twisted, haunted mirror'. 
+
+**Implementation**
+The installation uses a broken one-way mirror that is reassembled on a piece of plexiglass. The individual shards are mapped on an iPad and when
+visualizations are displayed in these shapes, the mirror shards turn almost into tiny displays. When nothing is visualized in the shard, it turns
+back into a mirror. This way, you have control over what is a mirror and what is not.
+
+Video is recorded and pictures are taken of the user during the expierence, these images are mapped in the shards, both in positive and negative color.These images can be displayed in any order to create that twisted mirror effect. The explore the combination of analog and digital visualizations further, digital noise can also be displayed.
+
+Finally, the application will be generating new cracks and shards, inspired by http://vimeo.com/27653645. I tried to archieve a similar effect using a Particle system with walkers, and with the Voronoi algorthim. The first iteration (walkers) is part of iOS application but does not run very well. To explore a shatter division further, I created the Voronoi visualization first with Processing and ported this later into openFrameworks, where the seeds (the particles) respond to a vector field of an image. Next step is to make sure this code runs well in openFrameworks (porting from Processing to oF was difficult) and run it on iOS. 
+
+**Addons Used**
+* ofxSvg: the shards are mapped in Adobe Illustrator and translated into shapes in openFrameworks using this addon.
+* ofxImageMask: to mask images in the shards. This is not a perfect solution, Fbo's have to be turned into ofImage on every frame now, which slows down
+the application too much. In the future, I'd like to look more into masking just with fbo's.
+* OpenCv and the OpenCvFaceExample: after a face is recognized by the iPad, video and pictures can be recorded.
